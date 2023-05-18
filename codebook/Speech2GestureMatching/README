@@ -1,0 +1,77 @@
+README
+======
+
+
+Python pre-requisites
+=====================
+
+Python >= 3.7.3
+Pytorch >= 1.10.0
+matplotlib >= 3.1.2
+opencv-python >= 4.1.2.30
+
+
+Data
+====
+
+The data we use for this code can be found in the following project page by
+Habibie et al. (2021):
+https://vcai.mpi-inf.mpg.de/projects/3d_speech_driven_gesture/
+
+For each speaker, there exists 2 versions of training data: 
+the one with overlapping frames, and another one without frame duplication.
+
+We will use both versions to train our method. The one without frame duplication
+is used as our Matching Database for the k-NN, while the one with overlapping is
+used to train the "fake" examples for the ResyncNet GAN.
+
+Each version of the data contains the following variables:
+- 'wav'     # shape: (n_sequences, n_wav_samples)
+- 'body'    # shape: (n_sequences, n_frames, 165)
+- 'face'    # shape: (n_sequences, n_frames, 257)
+- 'imgs'    # shape: (n_sequences, n_frames,)
+
+To obtain the 'mfcc' features, use the following Sphinx III's snippet by passing 
+the provided 'wav' variable as input:
+https://github.com/supasorn/synthesizing_obama_network_training
+
+We used the first 13 coefficients and the log mean energy to obtain 14 channels
+of MFCC features. Furthermore, we also compute the first derivative of these
+features which we concatenate together along the channel dimension. 
+The shape of the 'mfcc' data is (n_sequences, n_frames, 28).
+
+
+Predicting New Gestures using GestureKNN
+========================================
+
+Assuming we are using "oliver" data, run the following command to predict
+new gestures using the k-NN algorithm:
+
+python GestureKNN.py \
+	--train_database=train_oliver_noduplication_data.npz \
+	--test_data=test_oliver_data.npz \
+	--out_knn_filename=/path/to/knn_pred.npz \
+	--out_video_path=/path/to/output_video_folder/
+
+
+Training and Testing ReSyncGestureKNN
+=====================================
+
+Before training the model, we first need to generate "fake gesture examples" by running
+the k-NN algorithm on the training sequences.
+
+For "oliver" sequence, this can be achieved by running GestureKNN on the overlapping
+data (train_oliver_data.npz) to produce new gesture. We then append this new variable
+as 'body_searched' to the file.
+
+Use the following command to train the model:
+
+python ReSyncGestureKNN.py --train \
+	--train_database=train_oliver_noduplication_data.npz \
+	--test_data=test_oliver_data.npz \
+	--train_searched_motion=train_oliver_data.npz \
+	--out_knn_filename=/path/to/knn_pred.npz \
+	--out_resync_model=/path/to/trained_model_folder/ \
+	--out_video_path=/path/to/output_video_folder/
+
+The 'train' option can be disabled if a trained model is already available.

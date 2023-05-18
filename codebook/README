@@ -1,0 +1,26 @@
+# README
+
+Use speaker 1 for debug.
+
+## 1. Prepare dataset
+
+### Audio and gesture
+
+### Text
+
+We only use self-talk dataset, witch text is available now.
+
+Transcript 83 is lost.
+
+Install Gentle. (Follow Trimodal)
+
+## 2. KNN based matching
+
+
+## 3. Codebook
+
+## 4. DeepPhase
+
+
+
+## 5. 
