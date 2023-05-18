@@ -4,7 +4,7 @@
 
 
 <div align=center>
-<img src="overview.png" width="700px">
+<img src="overview.png" width="750px">
 </div>
 
 ## 1. Environment Settings
@@ -39,7 +39,7 @@ Then you will get `.bvh`, `.mp4` and other intermediate files in `.codebook/Spee
 
 You can use [Blender](https://www.blender.org/) to visualize bvh file.
 
-
+https://github.com/YoungSeng/QPGesture/assets/37477030/d554f634-04e6-4f7e-8cb8-5f382af282a1
 
 We also provide a processed database for speaker id `1`, available for download in [Tsinghua Cloud](https://cloud.tsinghua.edu.cn/f/664315658a884321bec6/) and [Baidu Cloud](https://pan.baidu.com/s/1zJb5OB3Yt4lyhSDa_t7koA?pwd=q6na). It is optional to download this database.
 
