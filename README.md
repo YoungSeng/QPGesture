@@ -1,6 +1,6 @@
 # QPGesture: Quantization-Based and Phase-Guided Motion Matching for Natural Speech-Driven Gesture Generation
 
-### [Arxiv](TBA) | [Demo](https://www.youtube.com/watch?v=AVqHhnVmGlU) | [Presentation Video](https://www.youtube.com/watch?v=5GKjFclT618)
+### [Arxiv](https://arxiv.org/abs/2305.11094) | [Demo](https://www.youtube.com/watch?v=AVqHhnVmGlU) | [Presentation Video](https://www.youtube.com/watch?v=5GKjFclT618)
 
 
 <div align=center>
