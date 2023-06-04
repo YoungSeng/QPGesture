@@ -11,8 +11,8 @@
 
 This code was tested on `NVIDIA GeForce RTX 2080 Ti` and requires `conda or miniconda`.
 
+<!--# cd /ceph/hdd/yangsc21/Python/QPG/-->
 ```angular2html
-# cd /ceph/hdd/yangsc21/Python/QPG/
 conda create -n QPGesture python=3.7
 conda activate QPGesture
 pip install torch==1.8.0+cu111 -f https://download.pytorch.org/whl/torch_stable.html
@@ -21,7 +21,7 @@ pip install -r requirements.txt
 
 ## 2. Quick Start
 
-Download our processed database and pre-trained models from [Tsinghua Cloud](https://cloud.tsinghua.edu.cn/f/0234cd16166c4402b64c/) or [Google Cloud](https://drive.google.com/file/d/10uQR5KVbx6Xb0MEG6K5WqOlxkOH3CLlc/view?usp=sharing) and place them in the project path.
+Download our processed database and pre-trained models from [Tsinghua Cloud](https://cloud.tsinghua.edu.cn/f/0234cd16166c4402b64c/) or [Google Cloud](https://drive.google.com/file/d/10uQR5KVbx6Xb0MEG6K5WqOlxkOH3CLlc/view?usp=sharing) and place them in the `data` fold and `pretrained_model` fold in the project path.
 
 ```angular2html
 cd ./codebook/Speech2GestureMatching/

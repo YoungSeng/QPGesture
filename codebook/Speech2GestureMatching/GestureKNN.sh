@@ -5,8 +5,8 @@ out_knn_filename=${3:-'./output/result.npz'}
 echo $test_wavvq $max_frames $out_knn_filename
 
 python GestureKNN.py \
-    --train_database=../../data/BEAT/speaker_10_state_0/speaker_10_state_0_train_240_txt.npz \
-    --test_data=../../data/BEAT/speaker_10_state_0/speaker_10_state_0_test_240_txt.npz \
+    --train_database=../../data/BEAT/speaker_10_state_0/speaker_10_state_0_train_240_txt_2.npz \
+    --test_data=../../data/BEAT/speaker_10_state_0/speaker_10_state_0_test_240_txt_2.npz \
     --out_knn_filename=$out_knn_filename \
     --out_video_path=./output/output_video_folder/ \
     --train_codebook=../../data/BEAT/speaker_10_state_0/speaker_10_state_0_train_240_code.npz \
