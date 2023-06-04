@@ -37,6 +37,8 @@ python VisualizeCodebook.py --config=./configs/codebook.yml --no_cuda 0 --gpu 0 
 
 Then you will get `.bvh`, `.mp4` and other intermediate files in `.codebook/Speech2GestureMatching/output/knn_pred_wavvq/`
 
+https://github.com/YoungSeng/QPGesture/assets/37477030/0ee4bab2-056c-4dd1-b35f-6c125efaaf4e
+
 You can use [Blender](https://www.blender.org/) to visualize bvh file.
 
 https://github.com/YoungSeng/QPGesture/assets/37477030/d554f634-04e6-4f7e-8cb8-5f382af282a1
