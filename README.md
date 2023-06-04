@@ -43,7 +43,7 @@ You can use [Blender](https://www.blender.org/) to visualize bvh file.
 
 https://github.com/YoungSeng/QPGesture/assets/37477030/d554f634-04e6-4f7e-8cb8-5f382af282a1
 
-We also provide a processed database for speaker id `1`, available for download in [Tsinghua Cloud](https://cloud.tsinghua.edu.cn/f/c9401c6c0142480f826a/) and [Baidu Cloud](链接：https://pan.baidu.com/s/1g3tN7c9KDfbhiJ-ET2jfmQ?pwd=q9ub). It is optional to use this database.
+We also provide a processed database for speaker id `1`, available for download in [Tsinghua Cloud](https://cloud.tsinghua.edu.cn/f/c9401c6c0142480f826a/) and [Baidu Cloud](https://pan.baidu.com/s/1g3tN7c9KDfbhiJ-ET2jfmQ?pwd=q9ub). It is optional to use this database.
 
 ## 3. Test your own audio
 
