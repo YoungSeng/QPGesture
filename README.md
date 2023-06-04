@@ -21,7 +21,7 @@ pip install -r requirements.txt
 
 ## 2. Quick Start
 
-Download our processed database and pre-trained models from [Tsinghua Cloud](https://cloud.tsinghua.edu.cn/f/0234cd16166c4402b64c/) or [Google Cloud](https://drive.google.com/file/d/10uQR5KVbx6Xb0MEG6K5WqOlxkOH3CLlc/view?usp=sharing) and place them in the `data` fold and `pretrained_model` fold in the project path.
+Download our processed database and pre-trained models from [Tsinghua Cloud](https://cloud.tsinghua.edu.cn/f/0f40065da78648f69b6e/) or [Google Cloud](https://drive.google.com/file/d/1h_nIGGDYvsSO5kh--eBzyRNxnuBOqDif/view?usp=sharing) and place them in the `data` fold and `pretrained_model` fold in the project path.
 
 ```angular2html
 cd ./codebook/Speech2GestureMatching/
@@ -41,7 +41,7 @@ You can use [Blender](https://www.blender.org/) to visualize bvh file.
 
 https://github.com/YoungSeng/QPGesture/assets/37477030/d554f634-04e6-4f7e-8cb8-5f382af282a1
 
-We also provide a processed database for speaker id `1`, available for download in [Tsinghua Cloud](https://cloud.tsinghua.edu.cn/f/664315658a884321bec6/) and [Baidu Cloud](https://pan.baidu.com/s/1zJb5OB3Yt4lyhSDa_t7koA?pwd=q6na). It is optional to download this database.
+We also provide a processed database for speaker id `1`, available for download in [Tsinghua Cloud](https://cloud.tsinghua.edu.cn/f/c9401c6c0142480f826a/) and [Baidu Cloud](链接：https://pan.baidu.com/s/1g3tN7c9KDfbhiJ-ET2jfmQ?pwd=q9ub). It is optional to use this database.
 
 ## 3. Test your own audio
 
