@@ -1,11 +1,14 @@
 # QPGesture: Quantization-Based and Phase-Guided Motion Matching for Natural Speech-Driven Gesture Generation
 
-### [Arxiv](https://arxiv.org/abs/2305.11094) | [Demo](https://www.youtube.com/watch?v=AVqHhnVmGlU) | [Presentation Video](https://www.youtube.com/watch?v=5GKjFclT618)
-
+### [Conference archive](https://openaccess.thecvf.com/content/CVPR2023/papers/Yang_QPGesture_Quantization-Based_and_Phase-Guided_Motion_Matching_for_Natural_Speech-Driven_Gesture_CVPR_2023_paper.pdf) | [Arxiv](https://arxiv.org/abs/2305.11094) | [Demo](https://www.youtube.com/watch?v=AVqHhnVmGlU) | [Presentation Video](https://www.youtube.com/watch?v=5GKjFclT618)
 
 <div align=center>
 <img src="overview.png" width="750px">
 </div>
+
+### Further Work
+
+📢 [DiffuseStyleGesture](https://github.com/YoungSeng/DiffuseStyleGesture) - Based on the diffusion model, the full body gesture.
 
 ## 1. Environment Settings
 
