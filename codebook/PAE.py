@@ -520,6 +520,7 @@ if __name__ == '__main__':
     pprint(config)
 
     config = EasyDict(config)
+    config.no_cuda = config.gpu
 
     network = utility.ToDevice(Model(
         input_channels=input_channels,
