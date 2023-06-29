@@ -307,6 +307,7 @@ if __name__ == '__main__':
         config[k] = v
 
     config = EasyDict(config)
+    config.no_cuda = config.gpu
 
     make_lmdb_gesture_dataset(config.beat_data_to_lmdb.path, lmdb_name=config.beat_data_to_lmdb.lmdb_name,
                               modetyepe=config.beat_data_to_lmdb.mode, remake=True, recode=False)
