@@ -384,6 +384,7 @@ if __name__ == '__main__':
 
     config = EasyDict(config)
     mydevice = torch.device('cuda:' + config.gpu)
+    config.no_cuda = config.gpu
 
     if config.stage == 'train':
         cal_distance(config, model_path=config.VQVAE_model_path, save_path=None,
