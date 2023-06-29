@@ -158,5 +158,6 @@ if __name__ == '__main__':
     pprint(config)
 
     config = EasyDict(config)
+    config.no_cuda = config.gpu
 
     main(config)
