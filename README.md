@@ -35,7 +35,7 @@ You will get the results in `./codebook/Speech2GestureMatching/output/result.npz
 
 ```angular2html
 cd ..
-python VisualizeCodebook.py --config=./configs/codebook.yml --no_cuda 0 --gpu 0 --code_path "./Speech2GestureMatching/output/result.npz" --VQVAE_model_path "../pretrained_model/codebook_checkpoint_best.bin" --stage inference
+python VisualizeCodebook.py --config=./configs/codebook.yml --gpu 0 --code_path "./Speech2GestureMatching/output/result.npz" --VQVAE_model_path "../pretrained_model/codebook_checkpoint_best.bin" --stage inference
 ```
 
 Then you will get `.bvh`, `.mp4` and other intermediate files in `.codebook/Speech2GestureMatching/output/knn_pred_wavvq/`
@@ -97,7 +97,7 @@ Now we get a basic database and further we compute phase, wavlm and wavvq featur
 
 ```
 cd ../codebook/
-python PAE.py --config=./configs/codebook.yml --no_cuda 0 --gpu 0 --stage inference
+python PAE.py --config=./configs/codebook.yml --gpu 0 --stage inference
 cd ../process/
 python make_beat_dataset.py --config "../codebook/configs/codebook.yml" --BEAT_path "../dataset/orig_BEAT/speakers/" --save_dir "../dataset/BEAT" --prefix "speaker_10_state_0" --gpu 0 --step 2
 ```
@@ -111,7 +111,7 @@ This is just an example of speaker id `10`, in fact we use all speakers to train
 
 ```angular2html
 pip install numpy==1.19.5       # Unfortunately, we have been troubled with the version of the numpy library (with pyarrow).
-python beat_data_to_lmdb.py --config=../codebook/configs/codebook.yml --no_cuda 0 --gpu 0
+python beat_data_to_lmdb.py --config=../codebook/configs/codebook.yml --gpu 0
 ```
 Then you will get `data mean/std`, and you may copy them to `./codebook/configs/codebook.yml`.
 
@@ -119,14 +119,14 @@ Then you will get `data mean/std`, and you may copy them to `./codebook/configs/
 
 ```angular2html
 cd ../codebook/
-python train.py --config=./configs/codebook.yml --no_cuda 0 --gpu 0
+python train.py --config=./configs/codebook.yml --gpu 0
 ```
 The gesture VQ-VAE will saved in `./codebook/output/train_codebook/codebook_checkpoint_best.bin`.
 
 For futher calculate the distance between each code, run
 
 ```angular2html
-python VisualizeCodebook.py --config=./configs/codebook.yml --no_cuda 0 --gpu 0 --code_path "./Speech2GestureMatching/output/result.npz" --VQVAE_model_path "./output/train_codebook/codebook_checkpoint_best.bin" --stage train
+python VisualizeCodebook.py --config=./configs/codebook.yml --gpu 0 --code_path "./Speech2GestureMatching/output/result.npz" --VQVAE_model_path "./output/train_codebook/codebook_checkpoint_best.bin" --stage train
 ```
 
 Then you will get the absolute pose of each code in `./codebook/output/code.npz` used in `Quick Start`.
