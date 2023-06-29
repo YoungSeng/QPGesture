@@ -134,7 +134,7 @@ Then you will get the absolute pose of each code in `./codebook/output/code.npz`
 ### PAE
 
 ```angular2html
-python PAE.py --config=./configs/codebook.yml --no_cuda 0 --gpu 0 --stage train
+python PAE.py --config=./configs/codebook.yml --gpu 0 --stage train
 ```
 
 The PAE will saved in `./codebook/output/train_PAE/PAE_checkpoint_best.bin`
