@@ -153,7 +153,9 @@ If you find this work useful, please consider cite our work with the following b
   title        = {QPGesture: Quantization-Based and Phase-Guided Motion Matching for Natural Speech-Driven Gesture Generation},
   booktitle    = {{IEEE/CVF} Conference on Computer Vision and Pattern Recognition, {CVPR}},
   publisher    = {{IEEE}},
+  month        = {June},
   year         = {2023},
+  pages        = {2321-2330}
 }
 ```
 
