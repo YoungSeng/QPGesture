@@ -502,7 +502,7 @@ def pose2phase(network, pose, data_mean, std):
             mydevice)
 
         _, _, _, params = network(test_batch)       # [1, 32400]
-        params = [j.detach().cpu().numpy() for j in params]
+        params = [j.detach().cpu() for j in params]
         result.append(params)
 
     return np.array(result)
