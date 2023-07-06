@@ -597,14 +597,14 @@ if __name__ == '__main__':
     if args.step == "1":
         make_beat_gesture_audio_dataset(root, save_dir)         # make dataset
         remake_beat_bvh(save_dir)       # check bvh
+    elif args.step == "2":
         remake_subdataset(save_dir, prefix)
         make_dataset(save_dir, prefix, mode='noduplication')
         # make_dataset(save_dir, prefix, mode='duplication')
-    elif args.step == "2":
+    elif args.step == "3":
         dataset_to_code(save_dir, prefix, n_frames=240, model_path="../pretrained_model/codebook_checkpoint_best.bin")
         wavlm_path = "../pretrained_model/WavLM-Large.pt"
         wav_to_wavlm(save_dir, prefix, wavlm_model_path=wavlm_path)
         wavvq_path = '../process/vq-wav2vec.pt'
         wav_to_vq(save_dir, prefix, wavvq_model_path=wavvq_path)
         make_txt_dataset(save_dir, prefix, mode='noduplication')
-
