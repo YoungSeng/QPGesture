@@ -408,7 +408,7 @@ def wav_to_vq(save_dir, prefix, wavvq_model_path):
         print(source_wav.shape)
         result = []
         # extract the representation of last layer
-        batch_size = 32
+        batch_size = 16        # maybe not enough memory for 32
         with torch.no_grad():
             i = 0
             for j in range(0, len(source_wav), batch_size):
