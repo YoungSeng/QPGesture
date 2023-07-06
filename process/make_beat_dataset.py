@@ -605,6 +605,7 @@ if __name__ == '__main__':
         dataset_to_code(save_dir, prefix, n_frames=240, model_path="../pretrained_model/codebook_checkpoint_best.bin")
         wavlm_path = "../pretrained_model/WavLM-Large.pt"
         wav_to_wavlm(save_dir, prefix, wavlm_model_path=wavlm_path)
+    elif args.step == "4":        # sometimes not enough memory to run together...
         wavvq_path = '../process/vq-wav2vec.pt'
         wav_to_vq(save_dir, prefix, wavvq_model_path=wavvq_path)
         make_txt_dataset(save_dir, prefix, mode='noduplication')
