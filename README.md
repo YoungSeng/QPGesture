@@ -101,6 +101,7 @@ cd ../codebook/
 python PAE.py --config=./configs/codebook.yml --gpu 0 --stage inference
 cd ../process/
 python make_beat_dataset.py --config "../codebook/configs/codebook.yml" --BEAT_path "../dataset/orig_BEAT/speakers/" --save_dir "../dataset/BEAT" --prefix "speaker_10_state_0" --gpu 0 --step 3
+python make_beat_dataset.py --config "../codebook/configs/codebook.yml" --BEAT_path "../dataset/orig_BEAT/speakers/" --save_dir "../dataset/BEAT" --prefix "speaker_10_state_0" --gpu 0 --step 4
 ```
 Then you will get all the databases in `Quick Start`.
 
