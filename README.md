@@ -8,7 +8,8 @@
 
 ### Further Work
 
-📢 [DiffuseStyleGesture](https://github.com/YoungSeng/DiffuseStyleGesture) - Based on the diffusion model, the full body gesture.
+📢 [DiffuseStyleGesture](https://github.com/YoungSeng/DiffuseStyleGesture)/[DiffuseStyleGesture+](https://github.com/YoungSeng/DiffuseStyleGesture/tree/master/BEAT-TWH-main) - Based on the diffusion model, the full body gesture.
+📢 [UnifiedGesture](https://github.com/YoungSeng/UnifiedGesture) - Training on multiple gesture datasets, refine the gestures.
 
 ## 1. Environment Settings
 
