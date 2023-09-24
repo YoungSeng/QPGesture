@@ -61,9 +61,9 @@ class TrinityDataset(Dataset):
             # pose_seq, audio, codes, aux_info = sample
             pose_seq, audio, aux_info = sample
 
-        # # normalize
-        # std = np.clip(self.data_std, a_min=0.01, a_max=None)
-        # pose_seq = (pose_seq - self.data_mean) / std
+        # normalize
+        std = np.clip(self.data_std, a_min=0.01, a_max=None)
+        pose_seq = (pose_seq - self.data_mean) / std
 
         # to tensors
         pose_seq = torch.from_numpy(pose_seq).reshape((pose_seq.shape[0], -1)).float()
